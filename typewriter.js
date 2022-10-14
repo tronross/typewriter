@@ -1,5 +1,13 @@
 const sentence = "while the digital revolution in music streaming is sublime, vinyl is still king";
+let typeCount = 0;
 
-for (const char of sentence) {
-  console.log(char);
+const type = function() {
+  if (typeCount < sentence.length) {
+  process.stdout.write(sentence.charAt(typeCount));
+  typeCount++;
+}
+}
+
+const typeOut = function() {
+  setInterval(type(), 120);
 };
